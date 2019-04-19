@@ -307,6 +307,6 @@ There are a few known limitations with the `{{#get}}` helper at the moment:
 
 - `{{#get}}` helpers may not work correctly when nested.
 - Other async helpers may not work when nested inside a get block (you may see an **aSyNcId_###** error on your page).
-- You cannot yet filter on count.posts
-- Ordering alphabetically may be case sensitive depending on database
-- `{{pagination}}` won't output anything sensible when used inside  `{{#get}}` block, because the get helper can only fetch existing data. It doesn't create a /page/2/ version of the data you are fetching.
+- You cannot yet filter on `count.posts`
+- Ordering alphabetically may be case sensitive depending on database.
+- `{{pagination}}` won't output anything sensible when used inside `{{#get}}` block, because the get helper can only fetch existing data. It doesn't create a /page/2/ version of the data you are fetching.
