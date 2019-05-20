@@ -13,7 +13,7 @@ keywords:
 
 **Build a completely custom front-end to your Ghost site with the power of Gatsby!**
 
-Thanks to the Content API, Ghost can now operate as a [completely decoupled headless CMS](https://blog.ghost.org/jamstack/), allowing developers to build their own front-end with modern web technologies, such as [Gatsby.js](https://www.gatsbyjs.org/). This entire docs site is built in the same manner, so you’re looking at proof that it really works!
+Thanks to the Content API, Ghost can operate as a [completely decoupled headless CMS](https://blog.ghost.org/jamstack/), allowing developers to build their own front-end with modern web technologies, such as [Gatsby.js](https://www.gatsbyjs.org/). The Ghost documentation site is built in the same manner, so you’re looking at proof that it really works!
 
 ![](./images/admin-api-gatsby-diagram.png)
 
@@ -34,7 +34,7 @@ npm install --save gatsby-source-ghost
 
 After that, the next step is to get API URL and Content API Key of the Ghost site.
 
-The API URL is the site URL ending in `.ghost.io`, for example: `mysite.ghost.io`. For Ghost(Pro) customers, your Ghost site URL also ends in `.ghost.io`. For self-hosted versions of Ghost, use the admin panel access URL - ensure that the self-hosted version is served over a https connection. The Content API Key can be found on the Integrations screen of the Ghost Admin.
+The API URL is domain used to access the Ghost Admin, for Ghost(Pro) customers this is the `.ghost.io`, for example: `mysite.ghost.io`. For self-hosted versions of Ghost, use the admin panel access URL - ensure that the self-hosted version is served over a https connection. The Content API Key can be found on the Integrations screen of the Ghost Admin.
 
 Open the `gatsby-config.js` file and add the following to the `plugins` section:
 
