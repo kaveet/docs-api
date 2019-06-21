@@ -25,7 +25,7 @@ Ghost's dynamic routing system is an extremely powerful way to build advanced st
 While these docs cover simple examples and broad use-cases, you'll find more detailed and specific use-cases of how to build different types of publication in these tutorials:
 
 - [Build a multi-language site with Ghost](https://docs.ghost.org/tutorials/multi-language-content/)
-- [How to make an iTunes Podcast RSS feed with Ghost](/tutorials/custom-rss-feed/)
+- [How to make an iTunes Podcast RSS feed with Ghost](https://docs.ghost.org/tutorials/custom-rss-feed/)
 - [Set up a business website with Ghost](https://docs.ghost.org/tutorials/custom-home-page/)
 - [How to build specialised content hubs for Ghost](https://docs.ghost.org/tutorials/building-a-content-hub/)
 - [Create an ongoing story with chronological posts](https://docs.ghost.org/tutorials/chronological-posts/)

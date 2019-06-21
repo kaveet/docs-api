@@ -36,7 +36,7 @@ Your admin domain can be different to your main domain, and may include a subdir
 
 #### Version
 
-Version strings are required and usually start with `v`. The [api versioning](/faq/api-versioning/) guide explains the current available versions and stability index. The Admin API also has a stability index for specific [endpoints](/api/admin/#endpoints).
+Version strings are required and usually start with `v`. The [api versioning](https://docs.ghost.org/faq/api-versioning/) guide explains the current available versions and stability index. The Admin API also has a stability index for specific [endpoints](/api/admin/#endpoints).
 
 
 ### JSON Format
@@ -111,7 +111,7 @@ Using an email address and password, you authenticate as a specific user, with t
 
 Integrations have a restricted set of fixed permissions allowing access to certain endpoints e.g. `GET /users/` or `POST /posts/`. The full set of endpoints that integrations can access are those listed as [endpoints](#endpoints) on this page.
 
-User permissions are dependent entirely on their role. You can find more details in the [team management guide](/faq/managing-your-team/). Authenticating as a user with the Owner or Admin role will give access to the full set of API endpoints. Many endpoints can be discovered by inspecting the requests made by Ghost Admin, the [endpoints](#endpoints) listed on this page are those stable enough to document.
+User permissions are dependent entirely on their role. You can find more details in the [team management guide](https://docs.ghost.org/faq/managing-your-team/). Authenticating as a user with the Owner or Admin role will give access to the full set of API endpoints. Many endpoints can be discovered by inspecting the requests made by Ghost Admin, the [endpoints](#endpoints) listed on this page are those stable enough to document.
 
 
 
@@ -539,4 +539,4 @@ The current version of the Ghost site. Use this to check the minimum version is 
 
 The v2 Admin API introduced several **stable** endpoints as of **Ghost 2.16.0**.
 See the [endpoints table](#endpoints) for details of which endpoints are considered stable.
-See the [stability index](/faq/api-versioning/) for full details of the API versions.
+See the [stability index](https://docs.ghost.org/faq/api-versioning/) for full details of the API versions.

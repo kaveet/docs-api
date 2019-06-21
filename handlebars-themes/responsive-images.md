@@ -82,4 +82,4 @@ Here's an [example from Ghost default Casper theme](https://github.com/TryGhost/
 
 Ghost image sizes will be automatically generated for all images uploaded directly _to_ Ghost, and will regenerated as needed automatically whenever you change an image, a list of sizes, or the theme being used. Unlike other platforms, there's no manual work needed to manage image sizes, it's all done in the background for you.
 
-Dynamic image sizes are _not_ compatible with externally hosted images. If you insert images from [Unsplash](/integrations/unsplash/) or you store your image files on a [third party storage adapter](/integrations/storage/) then the image url returned will be determined by the external source.
+Dynamic image sizes are _not_ compatible with externally hosted images. If you insert images from [Unsplash](https://ghost.org/integrations/unsplash/) or you store your image files on a [third party storage adapter](https://ghost.org/integrations/storage/) then the image url returned will be determined by the external source.

@@ -84,7 +84,7 @@ routes:
 
 Generally routes render HTML, but you can override that by specifying a `content_type` property with a custom mime-type.
 
-For example you might want to build a custom RSS feed to get all posts tagged with `podcast` and deliver them to iTunes. In fact, [here's a full tutorial](/tutorials/custom-rss-feed/) for how to do that.
+For example you might want to build a custom RSS feed to get all posts tagged with `podcast` and deliver them to iTunes. In fact, [here's a full tutorial](https://docs.ghost.org/tutorials/custom-rss-feed/) for how to do that.
 
 Or perhaps you'd like to build your own little public JSON API of breaking news, and provide it to other people to be able to consume your most important updates inside their websites and applications? That's fine too, you'd just pass `json` as the `content_type`.
 
