@@ -46,15 +46,15 @@ All Ghost(Pro) blogs have a `*.ghost.io domain` as their admin domain and requir
 
 `/ghost/api/{version}/content/`
 
-Each API is prefixed with the same path, followed by a specific version. Version strings are required and always start with `v`. The [api versioning](/faq/api-versioning/) guide explains the current available versions and stability index.
+Each API is prefixed with the same path, followed by a specific version. Version strings are required and always start with `v`. The [api versioning](https://docs.ghost.org/faq/api-versioning/) guide explains the current available versions and stability index.
 
 ### Key
 
 `?key={key}`
 
-Content API keys are provided via a query parameter in the url. These keys are safe for use in browsers and other insecure environments, as they only ever provide access to public data. Sites in private mode should consider where they share any keys they create. 
+Content API keys are provided via a query parameter in the url. These keys are safe for use in browsers and other insecure environments, as they only ever provide access to public data. Sites in private mode should consider where they share any keys they create.
 
-The Content API URL and key can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin. 
+The Content API URL and key can be obtained by creating a new `Custom Integration` under the **Integrations** screen in Ghost Admin.
 
 ![Get a Ghost Content API key](/images/apikey.png)
 
@@ -167,7 +167,7 @@ The API will always return valid JSON in the same structure:
 }
 ```
 
-- `resource_type`: will always match the resource name in the URL. All resources are returned wrapped in an array, with the exception of `/site/` and `/settings/`. 
+- `resource_type`: will always match the resource name in the URL. All resources are returned wrapped in an array, with the exception of `/site/` and `/settings/`.
 - `meta`: contains [pagination](/api/content/#pagination) information for browse requests.
 
 
@@ -181,7 +181,7 @@ GET /content/posts/{id}/
 GET /content/posts/slug/{slug}/
 ```
 
-By default, posts are returned in reverse chronological order by published date when fetching more than one. 
+By default, posts are returned in reverse chronological order by published date when fetching more than one.
 
 The most common gotcha when fetching posts from the Content API is not using the [include](#include) parameter to request related data such as tags and authors.
 By default, the response for a post will not include these:
@@ -203,7 +203,7 @@ Returns:
 
 ### Pages
 
-Pages are static resources that are not included in channels or collections on the Ghost front-end. 
+Pages are static resources that are not included in channels or collections on the Ghost front-end.
 The API will only return pages that were created as [resources](/concepts/pages/) and will not contain routes created with [dynamic routing](/api/handlebars-themes/routing/).
 
 
@@ -215,11 +215,11 @@ GET /content/pages/slug/{slug}/
 
 
 Pages are structured identically to posts. The response object will look the same, only the resource key will be `pages`.
-By default, pages are ordered by title when fetching more than one. 
+By default, pages are ordered by title when fetching more than one.
 
 ### Tags
 
-Tags are the [primary taxonomy](/concepts/tags/) within a Ghost site. 
+Tags are the [primary taxonomy](/concepts/tags/) within a Ghost site.
 
 ```JavaScript
 GET /content/tags/
@@ -476,5 +476,5 @@ The `message` field is designed to provide clarity on what exactly has gone wron
 
 ## Versioning
 
-The v2 Content API is **stable** as of **Ghost 2.10.0**. See the [stability index](/faq/api-versioning/) for full details of the API versions.
+The v2 Content API is **stable** as of **Ghost 2.10.0**. See the [stability index](https://docs.ghost.org/faq/api-versioning/) for full details of the API versions.
 You can disable the v0.1 Public API in the labs section of your admin panel.
