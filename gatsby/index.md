@@ -82,6 +82,6 @@ In most cases, it’s best to change both the development and production to the 
 
 Gaining a greater understanding of how data and content can be sourced from the Ghost API with GraphQL will help with extending aforementioned starter project for more specific use cases.
 
-There’s also a guide for setting up a new static site, such as Gatsby, [with the hosting platform Netlify](https://ghost.org/docs/integrations/netlify/). 
+There’s also a guide for setting up a new static site, such as Gatsby, [with the hosting platform Netlify](https://ghost.org/integrations/netlify/). 
 
 For community led support about linking and building a Ghost site with Gatsby, [visit the forum](https://forum.ghost.org/c/themes/).
