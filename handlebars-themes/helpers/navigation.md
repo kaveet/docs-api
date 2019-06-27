@@ -15,7 +15,7 @@ Usage: `{{navigation}}`
 
 ### Description
 
-`{{navigation}}` is a  template-driven helper which outputs formatted HTML of menu items defined in the Ghost admin panel (Settings > Navigation). By default, the navigation is marked up using a [preset template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/navigation.hbs).
+`{{navigation}}` is a  template-driven helper which outputs formatted HTML of menu items defined in the Ghost admin panel (Settings > Design > Navigation). By default, the navigation is marked up using a [preset template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/navigation.hbs).
 
 ### Default template
 
