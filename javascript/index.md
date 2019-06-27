@@ -1,7 +1,7 @@
 ---
 title: "Javascript"
 date: "2019-01-09"
-meta_title: "Javascript Content API Client Libarary – Ghost"
+meta_title: "Javascript Content API Client Library – Ghost"
 meta_description: "Ghost provides a flexible promise-based JavaScript library for accessing the Content API which can be used in any JavaScript project. Read more on Ghost Docs 👉"
 keywords:
     - "headless cms"
