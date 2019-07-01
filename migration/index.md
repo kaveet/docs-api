@@ -29,7 +29,7 @@ Ghost imports from existing blogs via a custom JSON data format, described below
 
 ### Non-official
 * **WordPress** users can also try the [wp2ghost](https://github.com/jonhoo/wp2ghost) command-line tool to convert their WordPress export files to Ghost-compatible JSON.
-* **Jekyll** users can try the [Jekyll to Ghost Plugin](https://github.com/redwallhp/Jekyll-to-Ghost)
+* **Jekyll** users can try the [Jekyll to Ghost Plugin](https://github.com/mekomlusa/Jekyll-to-Ghost)
 * **Blogger** users can try [Blogger2Ghost.NET](https://github.com/jessehouwing/Blogger2Ghost)
 * **Open-source geeks** may consider importing READMEs from all of their Github repositories as regular posts using [gh2ost](https://github.com/RReverser/gh2ost) tool.
 * **Tumblr** users can try [Tumblr to Ghost](https://github.com/jpadilla/tumblr-to-ghost)
