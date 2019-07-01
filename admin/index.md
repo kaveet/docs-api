@@ -286,7 +286,7 @@ These are the endpoints & methods currently available to integrations. More endp
 </tr>
 <tr>
   <td>/themes/</td>
-  <td>Upload</td>
+  <td>Upload, Activate</td>
   <td>Experimental</td>
 </tr>
 <td><a href="/api/admin/#site">/site/</a></td>
