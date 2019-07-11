@@ -32,7 +32,7 @@ The data used to output the `{{pagination}}` helper is generated based on the po
 
 ## Default Template
 
-The [default template](https://github.com/TryGhost/Ghost/blob/master/core/server/helpers/tpl/pagination.hbs) output by Ghost is shown below. You can override this by placing a file called `pagination.hbs` in the partials directory of your theme.
+The [default template](https://github.com/TryGhost/Ghost/blob/master/core/frontend/helpers/tpl/pagination.hbs) output by Ghost is shown below. You can override this by placing a file called `pagination.hbs` in the partials directory of your theme.
 
 ```handlebars
 <nav class="pagination" role="navigation">
