@@ -61,7 +61,9 @@ The `{{#get}}` helper has many more options than most helpers, the following sec
 The first parameter passed in is the name of the resource that you want to query. This can be either `"posts"`, `"tags"` or `"authors"`.
 
 **posts** - only published posts can be retrieved
+
 **tags** - any tag that has a post associated with it
+
 **authors** - any author who has a post associated with it
 
 Example:
@@ -122,15 +124,17 @@ If you want to output different content when there are no results, you will need
 
 ## Attributes
 
-The attributes that can be passed to the `{{#get}}` helper exactly match up to the query parameters that you can use in the Ghost JSON API. These allow you to specify the data to look for and how much data is returned. If you're making a 'browse' request (fetching multiple items) you can use any of these attributes and if you're making a 'read' request (fetching a single item by **id** or **slug** only **include** is available.
+The attributes that can be passed to the `{{#get}}` helper exactly match up to the query parameters that you can use in the Ghost JSON API. These allow you to specify the data to look for and how much data is returned. If you're making a 'browse' request (fetching multiple items) you can use any of these attributes and if you're making a 'read' request (fetching a single item by **id** or **slug**) only **include** is available.
 
 ### *limit*
 
 Specify the size of your collection
+
 Allowed values: positive integer and 'all'
+
 Default value: 15
 
-It is possible to use the global "posts per page" setting which is **5** by default or it can be configured via the active theme's `package.json` file, this global value is available via the `@config` global as `@config.posts_per_page`.
+It is possible to use the global `posts_per_page` setting which is **5** by default or it can be configured via the active theme's `package.json` file. This global value is available via the `@config` global as `@config.posts_per_page`.
 
 Examples:
 
@@ -229,7 +233,7 @@ This is a powerful tool that allows you to make a complex logic-based queries on
 {{/get}}
 ```
 
-Filtering can be used to specify multiple rules using *and* or *or** and can check for booleans, match against strings, look for items within a group, and many other things. For a full breakdown of the filtering syntax and how to use it, please see the Filter documentation in the API docs.
+Filtering can be used to specify multiple rules using *and* or *or* and can check for booleans, match against strings, look for items within a group, and many other things. For a full breakdown of the filtering syntax and how to use it, please see the Filter documentation in the API docs.
 
 #### Passing data to `filter`
 
@@ -239,21 +243,22 @@ When used with the `{{#get}}` helper, filters can be passed data which is alread
 {{#post}}
     <h3><a href="{{url}}">{{title}}</a></h3>
     <section class="author-meta">
-    <p>Post by: {{primary_author}}</a></p>
+        <p>Post by: {{primary_author}}</p>
+    </section>
 
     {{#get "posts" filter="authors:{{primary_author.slug}}+id:-{{id}}" limit="3"}}
         <p>More posts by this author:
-        <ol>
-            {{#foreach posts}}
-            <li><a href="{{url}}">{{title}}</a></li>
-            {{/foreach}}
-        </ol>
+            <ol>
+                {{#foreach posts}}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {{/foreach}}
+            </ol>
         </p>
     {{/get}}
 {{/post}}
 ```
 
-In this example, we look for posts with the `primary_author` (which is an alias of `authors[0].slug`) that matches the current author and that does not have the same `id` as the current post, so that we will get 3 different posts.
+In this example, we look for posts with the `primary_author` (which is an alias of `authors[0]`), that matches the current author and that does not have the same `id` as the current post, so that we will get 3 different posts.
 
 In some cases, you'll need to wrap the data you pass in with quotes, for example if you pass a title rather than a slug, because it contains spaces, and also if you want to use dates.
 
@@ -268,7 +273,7 @@ In some cases, you'll need to wrap the data you pass in with quotes, for example
 Also be aware that, if you want to filter based on dates, you need to use the data attributes e.g.`{{published_at}}`, not the `{{date}}` helper, as helper functions do not get called inside of a filter.
 
 #### Filtering by primary tag
-The primary_tag is a virtual post property and we support filtering by this property
+The `primary_tag` is a virtual post property and we support filtering by this property.
 
 ```handlebars
 {{#post}}
@@ -300,8 +305,8 @@ The primary_author is a virtual post property and we support filtering by this p
 
 There are a few known limitations with the `{{#get}}` helper at the moment:
 
-- `{{#get}}` helpers may not work correctly when nested
+- `{{#get}}` helpers may not work correctly when nested.
 - Other async helpers may not work when nested inside a get block (you may see an **aSyNcId_###** error on your page).
-- you cannot yet filter on count.posts
-- ordering alphabetically may be case sensitive depending on database
-- `{{pagination}}` won't output anything sensible when used inside  `{{#get}}` block - because the get helper can only fetch existing data, it doesn't create a /page/2/ version of the data you are fetching.
+- You cannot yet filter on `count.posts`
+- Ordering alphabetically may be case sensitive depending on database.
+- `{{pagination}}` won't output anything sensible when used inside `{{#get}}` block, because the get helper can only fetch existing data. It doesn't create a /page/2/ version of the data you are fetching.
