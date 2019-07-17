@@ -85,7 +85,13 @@ An optional template for author archive pages. If not specified the `index.hbs` 
 An optional template for the password form page on password protected publications.
 
 #### error.hbs
-An optional theme template for any 404 or 500 errors. If one is not specified Ghost will use the default.
+An optional theme template for any 404 or 500 errors that are not otherwise handled by error- or class-specific templates. If one is not specified Ghost will use the default.
+
+#### error-{{error-class}}xx.hbs
+An optional theme template for errors belonging to a specific class (e.g. `error-4xx.hbs` for 400-level errors). A matching error class template is prioritized over both `error.hbs` and the Ghost default template for rendering the error.
+
+#### error-{{error-code}}.hbs
+An optional theme template for status code-specific errors (e.g. `error-404.hbs`). A matching error code template is prioritized over all other error templates for rendering the error.
 
 #### amp.hbs
 An optional theme template for  AMP ([Accelerated Mobile Pages](https://www.ampproject.org/docs/get_started/about-amp.html)). If your theme doesn't provide an `amp.hbs` file, Ghost will use its default.
